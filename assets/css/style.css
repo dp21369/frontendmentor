@@ -1,0 +1,385 @@
+/* Main CSS here */
+
+body {
+    font-family: 'Spartan', sans-serif;
+    color: hsl(0, 0%, 63%);
+    font-size: 12px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: hsl(0, 0%, 0%);
+}
+
+
+/* CSS for Container width  */
+
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1440px;
+    }
+}
+
+
+/* Menu CSS */
+
+.logo {
+    text-align: center;
+}
+
+#mbl-nav {
+    position: absolute;
+    background-image: url('../images/icon-hamburger.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: 10px; */
+    width: 20px;
+    height: 15px;
+    display: none;
+}
+
+nav.primary-menu {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.menu-content ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 15px;
+}
+
+.menu-content ul li:hover:before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    height: 2px;
+    background: #FFF;
+}
+
+.menu-content ul li a {
+    color: #FFF;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.close-btn {
+    height: 16px;
+    width: 16px;
+    background: url('../images/icon-close.svg');
+    background-size: 15px;
+    background-repeat: no-repeat;
+    margin-right: 25px !important;
+    background-position-y: 2px;
+    display: none !important;
+}
+
+
+/* Silder CSS  */
+
+.banner-slider {
+    /* height: 535px; */
+    overflow: hidden;
+}
+
+.banner-slider:focus,
+.banner-text:focus {
+    outline: none;
+}
+
+.slider-content {
+    display: flex;
+}
+
+.half-width:first-child {
+    width: 58%;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.slider-content .col-lg-6:last-child {
+    padding-left: 0;
+}
+
+.slider-content .col-lg-6:first-child {
+    padding-right: 0;
+}
+
+.slider-content figure {
+    margin: 0;
+}
+
+.slider-content figure img {
+    width: 100%;
+}
+
+.banner-text {
+    /* display: flex;
+    flex-direction: column;
+    padding: 120px 105px;
+    height: 100%;
+    justify-content: center; */
+    padding: 10%;
+}
+
+.banner-text h2 {
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.banner-text p {
+    margin-bottom: 35px;
+}
+
+.link-text {
+    color: hsl(0, 0%, 0%);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-decoration: none;
+    outline: none;
+}
+
+.link-text span {
+    position: relative;
+}
+
+.link-text span::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: -80px;
+    height: 14px;
+    width: 40px;
+    background: url('../images/icon-arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+.link-text:hover {
+    color: hsl(0, 0%, 63%);
+}
+
+.link-text:hover span::before {
+    opacity: 0.4;
+}
+
+
+/* Slider buttons  */
+
+button.slick-arrow {
+    z-index: 9;
+}
+
+.slick-prev,
+.slick-next {
+    width: 80px;
+    height: 80px;
+    background: hsl(0, 0%, 0%);
+    top: auto;
+    bottom: 0px;
+    outline: none;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+
+.slick-next {
+    left: calc(58% - -15px);
+}
+
+.slick-prev {
+    left: calc(58% - 65px);
+}
+
+.slick-next:before,
+.slick-prev:before {
+    content: none;
+}
+
+.slick-next,
+.slick-next:focus {
+    background: hsl(0, 0%, 0%);
+    background-image: url('../images/icon-angle-right.svg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slick-prev,
+.slick-prev:focus {
+    background: hsl(0, 0%, 0%);
+    background-image: url('../images/icon-angle-left.svg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slick-next:hover {
+    background: hsl(0, 0%, 27%);
+    background-image: url('../images/icon-angle-right.svg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slick-prev:hover {
+    background: hsl(0, 0%, 27%);
+    background-image: url('../images/icon-angle-left.svg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* Intro section  */
+
+.home-section.into-wrapper {
+    display: flex;
+}
+
+.image-block img {
+    width: 100%;
+}
+
+.image-block:first-child {
+    width: 29%;
+}
+
+.image-block:last-child {
+    width: 30%;
+}
+
+.text-block {
+    width: 41%;
+    flex-flow: column;
+    align-self: center;
+    padding: 0 50px;
+}
+
+.text-block p {
+    line-height: 22px;
+}
+
+.text-block h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 4px;
+    font-size: 16px;
+}
+
+@media (max-width: 991px) {
+    #mbl-nav,
+    .close-btn {
+        display: inline-block !important;
+    }
+    nav.primary-menu {
+        margin-top: 48px;
+    }
+    .menu-content {
+        display: none;
+        background: #FFF;
+        margin-top: 0;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 100%;
+    }
+    .menu-content ul {
+        padding: 35px 15px;
+        margin: 0;
+        background: #FFF;
+    }
+    .menu-content ul li {
+        /* display: block; */
+        padding-right: 30px;
+        margin: 0;
+    }
+    .menu-content ul li a {
+        color: hsl(0, 0%, 0%);
+    }
+    .menu-content ul li:hover:before {
+        display: none;
+    }
+    .show-mobile {
+        display: block;
+        position: fixed;
+        background: #00000088;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 9;
+    }
+    .slider-content {
+        display: block;
+    }
+    .half-width,
+    .half-width:first-child {
+        width: 100%;
+    }
+    .banner-text {
+        padding: 70px 30px;
+    }
+    .banner-text h2 {
+        font-size: 24px;
+    }
+    .slick-prev,
+    .slick-next {
+        top: 277px;
+        top: calc(40% - 40px);
+    }
+    .slick-next {
+        left: auto;
+        right: 0;
+    }
+    .slick-prev {
+        left: auto;
+        right: 80px;
+    }
+    .link-text {
+        color: hsl(0, 0%, 0%);
+    }
+    .link-text span::before {
+        opacity: 1;
+    }
+    .home-section.into-wrapper {
+        display: block;
+    }
+    .image-block:first-child,
+    .text-block,
+    .image-block:last-child {
+        width: 100%;
+    }
+    .text-block {
+        padding: 70px 30px;
+    }
+}
+
+@media (max-width: 767px) {}
